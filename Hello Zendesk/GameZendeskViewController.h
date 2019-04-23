@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  GameZendeskViewController.h
 //  Hello Zendesk
 //
 //  Created by Ozay Demirezen on 23/04/2019.
@@ -9,12 +9,13 @@
 #import <UIKit/UIKit.h>
 @import ZendeskSDK;
 @import ZendeskCoreSDK;
+@import ZendeskProviderSDK;
 @import ZDCChat;
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+NS_ASSUME_NONNULL_BEGIN
 
-@property (strong, nonatomic) UIWindow *window;
-
+@interface GameZendeskViewController : UIViewController
 
 @end
 
+NS_ASSUME_NONNULL_END

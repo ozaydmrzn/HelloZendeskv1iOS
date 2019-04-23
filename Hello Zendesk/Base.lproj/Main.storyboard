@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="I0B-OK-lXe">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,186 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello Zendesk" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdd-8p-3ax">
+                                <rect key="frame" x="97" y="89" width="181" height="37"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Impossible Game" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JV0-nT-FYj">
+                                <rect key="frame" x="107" y="140" width="161" height="28"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rule is simple, push the button 1000 times in 10 secs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F3j-0y-nEK">
+                                <rect key="frame" x="26" y="256" width="323" height="18"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JfQ-4y-Tzq">
+                                <rect key="frame" x="170.5" y="340" width="34" height="30"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qju-28-Lec"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remaining Time: 0 Secs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ksi-kq-2Qt">
+                                <rect key="frame" x="77" y="575" width="221" height="28"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LwB-tR-H7W">
+                                <rect key="frame" x="180" y="511" width="15" height="35"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AbC-06-Fum">
+                                <rect key="frame" x="99" y="424" width="177" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="Push Here"/>
+                                <connections>
+                                    <action selector="pushCounter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hvg-gk-Qvd"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="GAME OVER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MFg-oc-lE3">
+                                <rect key="frame" x="126" y="396" width="125" height="28"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="20"/>
+                                <color key="textColor" red="1" green="0.29497987511628199" blue="0.30952404112056786" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8PX-xq-1Li" userLabel="Zendesk">
+                                <rect key="frame" x="105" y="605" width="254" height="36"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-BoldItalic" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="Any questions? Reach out to us">
+                                    <color key="titleColor" red="1" green="0.29497987510000001" blue="0.30952404109999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Eoj-cB-dhL" kind="push" id="CAm-Pf-Uva"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="F3j-0y-nEK" firstAttribute="centerX" secondItem="JV0-nT-FYj" secondAttribute="centerX" id="0BS-Pf-m52"/>
+                            <constraint firstItem="MFg-oc-lE3" firstAttribute="centerX" secondItem="AbC-06-Fum" secondAttribute="centerX" id="1zm-uf-g0K"/>
+                            <constraint firstItem="JfQ-4y-Tzq" firstAttribute="centerX" secondItem="F3j-0y-nEK" secondAttribute="centerX" id="7HT-mi-Dqf"/>
+                            <constraint firstItem="JV0-nT-FYj" firstAttribute="centerX" secondItem="bdd-8p-3ax" secondAttribute="centerX" id="9xX-SL-GbL"/>
+                            <constraint firstItem="bdd-8p-3ax" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="EkF-BF-ySp"/>
+                            <constraint firstItem="ksi-kq-2Qt" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Fox-MO-d6Q"/>
+                            <constraint firstItem="JV0-nT-FYj" firstAttribute="top" secondItem="bdd-8p-3ax" secondAttribute="bottom" constant="14" id="K8p-3d-NEd"/>
+                            <constraint firstItem="JfQ-4y-Tzq" firstAttribute="top" secondItem="F3j-0y-nEK" secondAttribute="bottom" constant="66" id="Lg6-m9-Ixr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8PX-xq-1Li" secondAttribute="bottom" constant="26" id="MJD-Eu-Ffu"/>
+                            <constraint firstItem="LwB-tR-H7W" firstAttribute="top" secondItem="AbC-06-Fum" secondAttribute="bottom" constant="27" id="WV0-g3-fos"/>
+                            <constraint firstItem="LwB-tR-H7W" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="WyH-8Q-X1C"/>
+                            <constraint firstItem="ksi-kq-2Qt" firstAttribute="top" secondItem="LwB-tR-H7W" secondAttribute="bottom" constant="29" id="YDZ-gr-TFT"/>
+                            <constraint firstItem="MFg-oc-lE3" firstAttribute="top" secondItem="AbC-06-Fum" secondAttribute="bottom" constant="-44" id="Yfm-SZ-UHP"/>
+                            <constraint firstItem="F3j-0y-nEK" firstAttribute="top" secondItem="JV0-nT-FYj" secondAttribute="bottom" constant="88" id="dBQ-mW-FwI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8PX-xq-1Li" secondAttribute="trailing" constant="16" id="n6m-bD-0Vg"/>
+                            <constraint firstItem="AbC-06-Fum" firstAttribute="top" secondItem="JfQ-4y-Tzq" secondAttribute="bottom" constant="54" id="nRE-Vv-ibT"/>
+                            <constraint firstItem="bdd-8p-3ax" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="wHr-G8-xwU"/>
+                            <constraint firstItem="AbC-06-Fum" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="yAk-mx-eeB"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="WfI-nA-lfg"/>
+                    <connections>
+                        <outlet property="counterLabel" destination="LwB-tR-H7W" id="19G-Ck-8lZ"/>
+                        <outlet property="gameOverLabel" destination="MFg-oc-lE3" id="0Ah-Zs-ojq"/>
+                        <outlet property="pushButton" destination="AbC-06-Fum" id="fJV-iH-32A"/>
+                        <outlet property="remainingTimeLabel" destination="ksi-kq-2Qt" id="Pfz-gf-7Fc"/>
+                        <outlet property="startButton" destination="JfQ-4y-Tzq" id="TTh-2C-V5s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1608.8" y="26.53673163418291"/>
+        </scene>
+        <!--Game Zendesk View Controller-->
+        <scene sceneID="8od-zr-mdn">
+            <objects>
+                <viewController id="Eoj-cB-dhL" customClass="GameZendeskViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Hk-fu-vfR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sDl-ue-OlV">
+                                <rect key="frame" x="162" y="172" width="77" height="30"/>
+                                <state key="normal" title="Contact Us"/>
+                                <connections>
+                                    <action selector="contactUs:" destination="Eoj-cB-dhL" eventType="touchUpInside" id="ezu-hy-AY0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OAn-cN-g2B">
+                                <rect key="frame" x="144" y="263" width="89" height="30"/>
+                                <state key="normal" title="My Requests"/>
+                                <connections>
+                                    <action selector="myRequests:" destination="Eoj-cB-dhL" eventType="touchUpInside" id="qL9-An-SBg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zyu-aG-lrb">
+                                <rect key="frame" x="159" y="106" width="82" height="30"/>
+                                <state key="normal" title="Help Center"/>
+                                <connections>
+                                    <action selector="helpCenterPush:" destination="Eoj-cB-dhL" eventType="touchUpInside" id="gHW-dX-YPi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJ5-E7-WEw">
+                                <rect key="frame" x="163" y="327" width="68" height="30"/>
+                                <state key="normal" title="Chat Now"/>
+                                <connections>
+                                    <action selector="chatNow:" destination="Eoj-cB-dhL" eventType="touchUpInside" id="Wka-0S-2mB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sDl-ue-OlV" firstAttribute="centerX" secondItem="H0P-JU-Lrw" secondAttribute="centerX" id="1sb-61-jia"/>
+                            <constraint firstItem="fJ5-E7-WEw" firstAttribute="centerX" secondItem="H0P-JU-Lrw" secondAttribute="centerX" id="53T-7R-JRc"/>
+                            <constraint firstItem="sDl-ue-OlV" firstAttribute="firstBaseline" secondItem="Zyu-aG-lrb" secondAttribute="baseline" constant="50" id="FIo-7m-G7X"/>
+                            <constraint firstItem="sDl-ue-OlV" firstAttribute="centerY" secondItem="H0P-JU-Lrw" secondAttribute="centerY" id="QCC-eh-26x"/>
+                            <constraint firstItem="fJ5-E7-WEw" firstAttribute="top" secondItem="OAn-cN-g2B" secondAttribute="bottom" constant="50" id="et1-z7-2N3"/>
+                            <constraint firstItem="OAn-cN-g2B" firstAttribute="centerX" secondItem="H0P-JU-Lrw" secondAttribute="centerX" id="gYk-DF-SAV"/>
+                            <constraint firstItem="OAn-cN-g2B" firstAttribute="firstBaseline" secondItem="sDl-ue-OlV" secondAttribute="baseline" constant="50" id="hs8-Xj-5Dr"/>
+                            <constraint firstItem="Zyu-aG-lrb" firstAttribute="centerX" secondItem="H0P-JU-Lrw" secondAttribute="centerX" id="k62-CH-dOZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="H0P-JU-Lrw"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="pun-UO-HNf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3ZW-aX-Udd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2536.8000000000002" y="48.125937031484263"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="JWy-Y9-Djb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="I0B-OK-lXe" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SfI-pe-fgJ">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="fJH-Q5-F9e"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sbg-2b-EGf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1500" y="-649.02548725637189"/>
         </scene>
     </scenes>
 </document>

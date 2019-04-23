@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 
+
 @interface AppDelegate ()
 
 @end
@@ -17,7 +18,19 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [ZDKCoreLogger setEnabled:YES];
+    [ZDKCoreLogger setLogLevel:ZDKLogLevelDebug];
+    [ZDCLog enable:YES];
+    [ZDCLog setLogLevel:ZDCLogLevelDebug];
+    [ZDKZendesk initializeWithAppId: @"38d28f53191c22102567d16656195bcc6f1071eae5e87bd1"
+                           clientId: @"mobile_sdk_client_a89fd186f74ecf8ca630"
+                         zendeskUrl: @"https://ozaydmrzntest.zendesk.com"];
+    [ZDKSupport initializeWithZendesk: [ZDKZendesk instance]];
+    id<ZDKObjCIdentity> userIdentity = [[ZDKObjCAnonymous alloc] initWithName:nil email:nil];
+    [[ZDKZendesk instance] setIdentity:userIdentity];
+    [ZDCChat initializeWithAccountKey:@"GjMF2W1JbqeTQeXbOL4RDURXUUkbOzOa"];
     return YES;
+    
 }
 
 
