@@ -1,0 +1,35 @@
+PODS:
+  - ZDCChat (1.4.0):
+    - ZDCChat/API (= 1.4.0)
+    - ZDCChat/Localization (= 1.4.0)
+    - ZDCChat/UI (= 1.4.0)
+  - ZDCChat/API (1.4.0)
+  - ZDCChat/Localization (1.4.0)
+  - ZDCChat/UI (1.4.0):
+    - ZDCChat/API
+  - ZendeskSDK (2.3.1):
+    - ZendeskSDK/Providers (= 2.3.1)
+    - ZendeskSDK/UI (= 2.3.1)
+  - ZendeskSDK/Core (2.3.1)
+  - ZendeskSDK/Providers (2.3.1):
+    - ZendeskSDK/Core
+  - ZendeskSDK/UI (2.3.1):
+    - ZendeskSDK/Core
+    - ZendeskSDK/Providers
+
+DEPENDENCIES:
+  - ZDCChat
+  - ZendeskSDK
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - ZDCChat
+    - ZendeskSDK
+
+SPEC CHECKSUMS:
+  ZDCChat: 1def9764647bb81cf71aebd9df38aa4024c52d12
+  ZendeskSDK: cbd49d65efb2f2cdbdcaac84e618896ae87b861e
+
+PODFILE CHECKSUM: 9525d4eda08b89e4d0bdae61f2377d661f071d8c
+
+COCOAPODS: 1.6.1
